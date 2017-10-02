@@ -1,0 +1,188 @@
+.footer {
+    padding: 1px 0;
+    background: url(../img/footer.jpg) no-repeat center bottom/cover;
+    min-height: 400px;
+    
+    
+}
+.footer .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    
+    
+}
+.title-footer {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    font: 900 1.5rem/2.6rem $fontRoboto;
+    text-transform: uppercase;
+}
+.footer-items {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $colorWhite;
+    
+}
+.footer-items .left {
+    min-height: 200px;
+    img {
+        margin-bottom: 2rem;
+    }
+    p.descr {
+        line-height: 26px;
+        padding-right:  2.5rem; 
+    }
+}
+.footer-items .center {
+    min-height: 200px;
+    .descr {
+        line-height: 26px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: url(../img/sprites-footer-1.png) no-repeat top;
+            top: 2px;
+            left: -30px;
+            width: 19px;
+            height: 20px;
+        }
+        &:last-child {
+            margin-top: -5px;
+            &::before {
+                background-position: bottom;
+            }
+        }
+    }
+    .map {
+        padding-left: 3rem;
+    }
+}
+
+.footer-items .right {
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    min-height: 200px;
+    form {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: -35px;
+        input:first-child {
+            color: rgba(255, 255, 255, .75);
+            background:none;
+            margin-right: 10px;
+            height: 45px;
+            line-height: 26px;
+            padding: 1.5ch 1.8rem;
+            opacity: .5;
+            width: 80%;
+        }
+        input:last-child {
+            background: url(../img/subscribe.png) no-repeat center/cover; 
+            min-width: 70px;
+            width: 20%;
+            border: none;
+        }
+        input:last-child:hover {
+            cursor: pointer;
+        }
+    }
+    .social-media {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .social {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: url(../img/social-btn.png) no-repeat; 
+            margin-bottom: 5px;
+            margin-right: 10px;
+            a {
+                display: block;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .social-2 {
+            background-position-x: -43px;
+        }
+        
+        .social-3 {
+            background-position-x: -87px;
+        }
+        
+        .social-4 {
+            background-position-x: -130px;
+        }
+        
+        .social-5 {
+            background-position-x: -172px;
+        }
+        
+        .social-6 {
+            background-position-x: -216px;
+            margin-right: 0;
+        }
+        .social-1:hover {
+            background-position-y:bottom;
+        }
+        .social-2:hover {
+            background-position-y:bottom;
+        }
+        .social-3:hover {
+            background-position-y:bottom;
+        }
+        .social-4:hover {
+            background-position-y:bottom;
+        }
+        .social-5:hover {
+            background-position-y:bottom;
+        }
+        .social-6:hover {
+            background-position-y:bottom;
+        }
+    }
+
+}
+.copyright {
+    width: 100%;
+    color: $colorWhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 7rem;
+    .left {
+        min-width: 200px;
+        ul {
+            padding: 0;
+            text-transform: uppercase;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                font: 1.4rem/2.6rem $fontRoboto;
+                color: $colorWhite;
+            }
+        }
+    }
+    .right {
+        min-width: 200px;
+        p.descr {
+            line-height: 2.6rem;
+            
+        }
+    }
+}

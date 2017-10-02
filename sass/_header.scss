@@ -1,0 +1,102 @@
+header {
+    background: url(../img/header-bg.jpg) center bottom/cover;
+    height: 670px;
+}
+
+.header_container {
+        padding-top: 10px;
+
+        div.row {
+            min-height: 100px;
+        }
+    .header_logo {
+        background: url(../img/logo.png) no-repeat;
+        min-width: 128px;
+        height: 50px;
+    }
+    nav {
+        ul {
+            display: flex;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+               
+            a {
+                    display: block;
+                    margin: 0 3px; 
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font: 900 1.3rem 'Roboto', sans-serif;
+                &:not(.active):hover{
+                   color: rgba(255, 200, 200, .45) ;
+                }
+            }
+
+             .active {
+                color: #00e0d0;
+            }
+        }
+    }
+}
+
+section {
+    height: 100vmin;
+    max-height: 670px;
+   
+    .caption {
+        width:100%;
+        text-align: center;
+        padding:15px 0;
+        color: #fff;
+        margin:auto;
+        
+        .title {
+            text-transform: capitalize;
+            font: 900 3.2rem $fontPlay, serif;
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: #00e0d0;
+                margin:20px auto 0;
+            }
+        }
+
+        .descr {
+            padding:  25px  0 0;
+            font: 300 1.4rem/2.4rem $fontRoboto, sans-serif;
+        }
+
+        .btn {
+            margin: 30px auto 0;
+      }
+
+        .block {
+               display: flex;
+               margin-top: 10%;
+               justify-content: space-between;
+               width: 60px;
+               height: 10px;
+            
+            span {
+                background: 0;
+                @include border(#bbbabc);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                }    
+
+            }
+            .active_dot {
+                background: #00e0d0;    
+            }
+
+        }    
+    }
+}

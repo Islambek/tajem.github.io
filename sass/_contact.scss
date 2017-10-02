@@ -1,0 +1,145 @@
+.contact {
+    padding: 1px 0;
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        min-height: 500px;
+    }
+}
+
+.contact-form {
+    h2.title-top {
+        color: $colorh2;
+        margin-bottom: 3rem;
+    }
+    form {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 461px;
+        justify-content: space-between;
+        input:not(:last-child),
+        textarea {
+            border-color: rgba(128, 128, 128, .10);
+            font: 300 1.4rem $fontRoboto;
+            color: $color_input;
+            padding: 1.5ch 1.8rem;
+        }
+        input {
+            height: 4.5rem;
+        }
+        textarea {
+            height: 20rem;
+        }
+    }
+}
+
+.client {
+    min-height: 517px;
+    h2.title-top {
+        color: $colorh2;
+        margin-bottom: 20px;
+    }
+    .images {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        justify-content: space-between; //max-height: 409px;    
+        margin-bottom: 4rem;
+        width: 100%;
+        min-height: 415px;
+        .img-logo {
+            width: calc(381px / 2); //max-width: calc(381px / 2);
+            height: 82px;
+            background: url(../img/sprites-3.png) no-repeat bottom center/cover;
+            &:first-child {
+                background-position: -5px 5px;
+                height: 50px;
+            }
+            &:nth-child(2) {
+                background-position: -5px -515px;
+                height: 50px;
+            }
+            &:nth-child(3) {
+                background-position: -5px -88px;
+                height: 75px;
+            }
+            &:nth-child(4) {
+                background-position: -5px -602px;
+                height: 75px;
+            }
+            &:nth-child(5) {
+                background-position: -5px -180px;
+                height: 65px;
+            }
+            &:nth-child(6) {
+                background-position: -5px -710px;
+                height: 65px;
+            }
+            &:nth-child(7) {
+                background-position: -5px -281px;
+            }
+            &:nth-child(8) {
+                background-position: -5px -797px;
+            }
+            &:nth-child(9) {
+                background-position: -5px -395px;
+                height: 85px;
+            }
+            &:nth-child(10) {
+                background-position: -5px -905px;
+                height: 85px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .client {
+        .images {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width:245px) {
+    .client {
+        .images {
+            .img-logo {
+                min-height: 82px;
+                &:nth-child(2) {
+                    background-position: -5px -490px;
+                }
+                &:nth-child(4) {
+                    background-position: -5px -572px;
+                }
+                &:nth-child(6) {
+                    background-position: -5px -655px;
+                }
+                &:nth-child(7) {
+                    background-position: -5px -260px;
+                }
+                &:nth-child(8) {
+                    background-position: -5px -755px;
+                }
+                &:nth-child(9) {
+                    background-position: -5px -380px;
+                }
+                &:nth-child(10) {
+                    background-position: -5px -840px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .contact-form {
+        form {
+            .btn {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+$fontsz: 10;
+$color: red;
+$colorh2: #413d4b;
+$color_input: rgba(65, 61, 75, 0.50);
+$colorP: #2f2d35;
+$colorWhite: #fff;
+$br-bg:rgba(225, 225, 225, .50);
+$width: 100;
+$fontRoboto: 'Roboto',
+sans-serif;
+$fontHammer: 'Hammersmith One';
+$fontPlay: 'Playfair Display',
+serif;
+@mixin upparcase {
+    text-transform: uppercase;
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+@mixin button($width) {
+    display: block;
+    width: $width + px;
+    height: 40px;
+    color: #00e0d0;
+    text-transform: uppercase;
+    font: 1.6rem $fontHammer, sans-serif;
+    background: 0;
+    @include border(#00e0d0);
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+    &:active {
+        box-shadow: none;
+        border: none;
+    }
+}
+
+@mixin margin-top-bot {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One|Playfair+Display:400,900|Roboto:300,400');
+* {
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.title-top {
+    @include upparcase;
+    font: bold 2.2rem $fontPlay;
+    margin-bottom: 10px;
+}
+
+.descr-top {
+    font: 1.4rem $fontPlay;
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        margin: 20px auto;
+    }
+}
+
+.title {
+    font: 900 1.4rem $fontRoboto;
+}
+
+.descr {
+    font: 300 1.4rem/2.2rem $fontRoboto;
+}
+.btn {
+    @include button(120);
+}
+.works,
+.about .container,
+.team .container,
+.expertise,
+.people-say .container,
+.contact .container,
+.footer .container {
+    @include margin-top-bot;
+}
+
+@import 'header';
+@import 'main';
+@import 'features';
+@import 'team';
+@import 'works';
+@import 'p-say';
+@import 'contact';
+@import 'footer';
+
+@media screen and (min-width:1080px) and (max-width:1600px) {
+    .container {
+        max-width: 960px;
+    }
+}
+.mobile-menu {
+    display: none;
+}

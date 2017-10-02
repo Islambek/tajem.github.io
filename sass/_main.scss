@@ -1,0 +1,80 @@
+.main {
+    min-height: 670px;
+    background: #fff;
+    padding: 1px;
+    height: 955px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    height: 42%;
+    .column-left {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+    .column-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2.title-top {
+            flex: 1 auto;
+            color: $colorh2;
+        }
+        .descr {
+            flex: 1 auto;
+            padding-right: 35px;
+        }
+        
+    }
+}
+
+.video {
+    width: 100%;
+    height: 58%;
+    background: url(../img/about2.jpg) no-repeat center/cover;
+    display: flex;
+    .play {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .play_icon {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background: url(../img/play_icon.png) no-repeat;
+            margin-bottom: 25px;
+        }
+        h3.text {
+            margin: auto;
+            font: 900 1.6rem $fontRoboto;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .about h2.title-top {
+        text-align: center;
+    }
+    .about .column-right {
+        min-height: 270px;
+    }
+    .about .column-right .descr {
+        padding: 0;
+    }
+    .about .btn {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .about .column-right {
+        min-height: 400px;
+    }
+}

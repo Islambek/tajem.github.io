@@ -1,0 +1,119 @@
+.expertise {
+    text-align: center;
+    .container {
+        h2.title-top {
+            color: $colorh2;
+        }
+        &>p.descr-top {
+            color: $colorP;
+            &::after {
+                background: $colorh2;
+            }
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            .features-item {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                min-height: 200px;
+                //
+                .image {
+                    width: 52px;
+                    height: 52px;
+                    background: url(../img/sprites.png) no-repeat;
+                    margin: auto;
+                    margin-top: 30px;
+                }
+                .title {
+                    color: $colorh2;
+                    margin: 3rem 0 2.2rem ;
+                }
+                .descr {
+                   color: #333;
+                   max-width: 400px;
+                   margin-left: auto;
+                   margin-right: auto;
+                }
+
+                
+
+                &:first-child {
+                    .image {
+                        background-position-x: 1.5px;
+                    }
+                }
+                &:nth-child(2) {
+                    .image {
+                        background-position-x: -57px;
+                    }
+                }
+                 &:nth-child(3) {
+                    .image {
+                        background-position-x: -109px;
+                    }
+                }
+                &:nth-child(4) {
+                    .image {
+                        background-position-x: -160px;
+                    }
+                }
+                &:nth-child(5) {
+                    .image {
+                        background-position-x: -212px;
+                    }
+                }
+                &:nth-child(6) {
+                    .image {
+                        background-position-x: -264px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .features {
+        .features-item {
+            border-bottom: 1px solid rgba(0, 0, 0, .08);    
+            
+            &:last-child {
+                border-bottom: none;  
+          }
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px){
+    .features {
+        .features-item {
+            border-bottom:1px solid rgba(0, 0, 0, .08);
+            &:nth-child(odd){
+                border-right:1px solid rgba(0, 0, 0, .08);
+            }
+            &:nth-child(5),&:nth-child(6) {
+                  border-bottom: none;  
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1200px)  {
+    .features {
+        .features-item {
+            &:nth-child(2),&:nth-child(5) {
+                border:1px solid rgba(0, 0, 0, .08);
+                border-top: none;
+            }
+            &:nth-child(1),&:nth-child(3) {
+                border-bottom:1px solid rgba(0, 0, 0, .08);
+            }
+            &:nth-child(5) {
+                  border-bottom: none;  
+            }
+        }
+    }
+}

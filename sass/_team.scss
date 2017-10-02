@@ -1,0 +1,55 @@
+.team {
+    text-align: center;
+    background: url(../img/team-bg.jpg) no-repeat center bottom/cover;
+    
+    padding: 1px 0;
+    .container {
+        color: #fff;
+        
+        &>p.descr-top {
+            &::after {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-top: 40px;
+            .item {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                margin-bottom: 40px;
+                min-height: 310px;
+                min-width: 215px;
+                max-width: 450px;
+                color: $colorWhite;
+                .br-bg {
+                    @include border($br-bg);
+                    border-width: 2px;
+                    border-top: none;
+                }
+                .foto {
+                    width: 100%;
+                    height: 229px;
+                    background: #fff;
+                }
+                .descr {
+                    font: 300 1.3rem $fontRoboto;
+                    color: rgba(250, 250, 250, .70);
+                }
+            }
+        }
+        p.descr {
+            line-height: normal;
+            color: #f3f3f3;
+            margin-bottom: 25px;
+        }
+        .btn {
+            width: 140px;
+            padding-top: 11px;
+            margin: auto;
+        }
+    }
+}
